@@ -1,0 +1,3 @@
+rootProject.name = 'MySignature_RN'
+
+include ':app'

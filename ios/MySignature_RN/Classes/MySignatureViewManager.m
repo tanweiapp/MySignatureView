@@ -18,7 +18,6 @@ RCT_EXPORT_VIEW_PROPERTY(onSaveSignatureClick, RCTBubblingEventBlock)
 // 导出方法，桥接到js的方法返回值类型必须是void
 /* 回调参数必须为两个，第一个为状态，第二个为参数 */
 RCT_EXPORT_METHOD(saveSignatureImageWithresolver:(RCTResponseSenderBlock)callback){
-  NSLog(@" ===> doSomething");
    dispatch_sync(dispatch_get_main_queue(), ^{
      CGFloat scale = [UIScreen mainScreen].scale;
      // 开启位图上下文
@@ -121,7 +120,6 @@ RCT_EXPORT_METHOD(saveSignatureImage
   //  导出事件
   self.signatureView.onSaveSignatureClick(@{@"target": self.signatureView.reactTag,
                                   @"value": encodedImageStr});
-
 }
 
 @end
